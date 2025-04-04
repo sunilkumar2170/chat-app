@@ -18,6 +18,10 @@ dependencies:
   cloud_firestore: ^5.6.5
   firebase_messaging: ^15.2.4
   lottie: ^3.2.0
+  image_picker: ^1.1.2
+  file_picker: ^9.2.2
+  speech_to_text: ^7.0.0
+  avatar_glow: ^3.0.1
 
 dev_dependencies:
   flutter_test:

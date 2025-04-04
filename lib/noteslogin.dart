@@ -4,7 +4,8 @@ import 'package:app_b/notessignup.dart';
 import 'package:app_b/notesforget.dart';
 import 'package:app_b/Next.dart'; // PhoneScreen class को import करें
 import 'package:app_b/notescheck user.dart';
-
+import 'package:app_b/mainpage.dart';
+import 'package:app_b/profilepic.dart';
 class NotesLogin extends StatefulWidget {
   @override
   State<NotesLogin> createState() => _NotesLoginState();
@@ -49,7 +50,7 @@ class _NotesLoginState extends State<NotesLogin> {
 
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => log()), // Ensure NextScreen exists
+        MaterialPageRoute(builder: (context) => ProfilePic()), // Ensure NextScreen exists
       );
     } on FirebaseAuthException catch (ex) {
       showAlert("Login Failed", ex.message ?? "An error occurred.");
@@ -129,12 +130,15 @@ class _NotesLoginState extends State<NotesLogin> {
                     var email = emailController.text.trim();
                     var password = passwordController.text.trim();
                     signInUser(email, password);
+
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
+
                     ),
+
                   ),
                   child: const Text(
                     "LOGIN",

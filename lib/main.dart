@@ -7,6 +7,7 @@ import 'package:app_b/notifaction.dart';
 import 'package:app_b/notescheck user.dart';
 import 'package:app_b/Next.dart';
 import 'package:app_b/noteslogin.dart';
+import 'package:app_b/mainpage.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,7 +32,9 @@ void main() async {
   }
 }
 
+
 class MyApp extends StatefulWidget {
+
   @override
   State<MyApp> createState() => _MyAppState();
 }
@@ -51,7 +54,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'Flutter App',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: user != null ? log() : NotesLogin(),
+      home: user != null ? MainPage() : NotesLogin(),
     );
   }
 }

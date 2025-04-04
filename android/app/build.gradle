@@ -1,21 +1,27 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'com.google.gms.google-services'
+}
+
 android {
     compileSdk 34  // ✅ Latest SDK
 
     defaultConfig {
         applicationId "com.example.app_b"
-        minSdkVersion 23
+        minSdkVersion 2
         targetSdkVersion 34
         versionCode 1
         versionName "1.0.0"
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17  // ✅ FIXED
-        targetCompatibility JavaVersion.VERSION_17  // ✅ FIXED
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = "17"  // ✅ FIXED
+        jvmTarget = "17"
     }
 }
 
@@ -26,11 +32,9 @@ flutter {
 dependencies {
     implementation platform('com.google.firebase:firebase-bom:33.11.0')
 
-    // 🔥 Firebase Dependencies (Corrected)
+    // ✅ Firebase Dependencies (Corrected)
     implementation 'com.google.firebase:firebase-auth'
     implementation 'com.google.firebase:firebase-firestore'
     implementation 'com.google.firebase:firebase-messaging'
     implementation 'com.google.firebase:firebase-analytics'
 }
-
-apply plugin: 'com.google.gms.google-services'  // ✅ Must be at the Bottom

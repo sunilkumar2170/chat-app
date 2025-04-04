@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.app_b">  <!-- ✅ Ensure package name is correct -->
+    package="com.example.app_b">
 
-    <uses-permission android:name="android.permission.INTERNET" />  <!-- ✅ Ensure Internet permission -->
+    <!-- Internet Permission -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
+    <!-- Storage Permissions (For Image Picker) -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Camera Permission (If using camera to capture images) -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- For Android 13+ (API 33+) -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+
+    <!-- For Android 11 (API 30) Scoped Storage -->
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:label="App B"
         android:name=".MyApplication"

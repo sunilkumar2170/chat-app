@@ -18,6 +18,7 @@ class _SignState extends State<Sign> {
       return;
     }
 
+
     try {
       UserCredential userCredential;
       userCredential = await FirebaseAuth.instance
